@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Auto Showroom</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #e74c3c;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .showroom {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .car-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .car-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(231, 76, 60, 0.2);
+    }
+
+    .car-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .car-card:hover .car-img {
+      transform: scale(1.05);
+    }
+
+    .car-details {
+      padding: 15px;
+    }
+
+    .car-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #f39c12;
+    }
+
+    .car-info {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin: 8px 0;
+    }
+
+    .price {
+      color: #2ecc71;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .car-name {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Elite Auto Showroom</h1>
+    <p>Premium Cars | Luxury Experience | Test Drives Available</p>
+  </header>
+
+  <div class="showroom">
+    <div class="car-card">
+      <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_1280.jpg" class="car-img" alt="Car 1">
+      <div class="car-details">
+        <div class="car-name">Lamborghini Aventador</div>
+        <div class="car-info">V12 Engine, 0-100 in 2.8s</div>
+        <div class="price">₹5.6 Crore</div>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg" class="car-img" alt="Car 2">
+      <div class="car-details">
+        <div class="car-name">BMW M4 Coupe</div>
+        <div class="car-info">503 HP, TwinPower Turbo</div>
+        <div class="price">₹1.5 Crore</div>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://cdn.pixabay.com/photo/2020/10/08/06/55/audi-5637522_1280.jpg" class="car-img" alt="Car 3">
+      <div class="car-details">
+        <div class="car-name">Audi RS5 Sportback</div>
+        <div class="car-info">2.9L TFSI V6, Quattro AWD</div>
+        <div class="price">₹1.2 Crore</div>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://cdn.pixabay.com/photo/2016/11/22/23/41/car-1853306_1280.jpg" class="car-img" alt="Car 4">
+      <div class="car-details">
+        <div class="car-name">Mercedes AMG GT</div>
+        <div class="car-info">Handcrafted V8, 0-100 in 3.7s</div>
+        <div class="price">₹2.6 Crore</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
